@@ -1,6 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
 # Entornos virtuales locales (nunca subir)
 .venv/
 venv/
 
 # Archivos de configuración con tokens secretos
 .env
+*.db
+*.sqlite3
+config.py
