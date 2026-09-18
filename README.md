@@ -6,7 +6,7 @@
 
 <img src="imagenes/sicaribot_menu.jpg" alt="Bot Telegram" height="200px" width="250px"/>
 
-<h1 align="center">SICARIOBOT🤖</h1>
+<h1 align="center">SICARIOBOT V2🤖</h1>
  
 </p>
 <div align="center">
@@ -20,25 +20,27 @@
 
  <h4 align="center"> 
 	🚧  SicarioBot 🚀 Bajo construcción...  🚧
-</h4> 
+</h4>
 
-## Acerca del bot ##
+## Acerca del bot
 
 Este proyecto fue realizado con el proposito de crear un bot para Telegram con la ayuda del lenguaje de Python y añadiendo distintas bibliotecas en ello. La función que tiene es realizar distintas busquedas de archivos a travez de los comandos con la ayuda de inteligencia artificial, asi como el registro de los usuarios. El bot fue creado por su servidor SicarioOfc, para que los usuarios lo ocupen a su gusto. Si te gusto este bot me apoyaria mucho dandole click a la estrella⭐ para agregarlo a tus favoritos y estar al tanto de las actualizaciones y cambios que se vayan realizando.
 
-## Requisitos necesarios ##
+## Requisitos necesarios
 
-Python;\
-Un editor de código o IDE (Usaremos Visual Studio Code);\
-PowerShell7;\
-Registrarse en Google Custom Search;
+- Python 3.11.9 (IMPORTANTE: No usar 3.13. ni 3.14, falla pydub);
+- FFmpeg (Obligatorio para descargar música/video)
+- Un editor de código o IDE (Usaremos Visual Studio Code);
+- Una consola de prueba: PowerShell7;
+- Token de @BotFather en Telegram;
+- Registrarse en Google Custom Search;
 
-## Lenguajes y herramientas usados ##
+## Lenguajes y herramientas usados
 
 Estos son los lenguajes y herramientas que se ocupo para el proyecto:
 
-- [Python](https://www.python.org/downloads/)
-- [ffmpeg](https://www.gyan.dev/ffmpeg/builds/)
+- [Python 3.11.9](https://www.python.org/downloads/release/python-3119/)
+- [ffmpeg](https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip)
 - [Git](https://git-scm.com/)
 - [java](https://www.java.com/es/download/ie_manual.jsp)
 - [Visual Studio Code](https://code.visualstudio.com/)
@@ -46,50 +48,68 @@ Estos son los lenguajes y herramientas que se ocupo para el proyecto:
 - [Google Cloud Console](https://console.cloud.google.com)
 - [Custom Search](https://programmablesearchengine.google.com/controlpanel/all)
 
-## Requerimientos necesarios ##
+## 1. Instalar FFmpeg
 
-Necesitaras tener instalado [Git](https://git-scm.com) y [Python](https://www.python.org/downloads/) para poder clonar y correr el proyecto correctamente.
+- **Windows:** Descargar de [ffmpeg.org](https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip) y agrégalo al PATH.
+- **Ubuntu:** `sudo apt install ffpeg -y`
 
-## Funciones a realizar ##
+## Instalación en Windows (PowerShell)
+
+```powershell
+# Clonar
+$ git clone https://github.com/programador024/SicariBot.git
+$ cd SicariBot
+# Crear entorno con Python 3.11
+$ py -3.11 -m venv .venv
+$ .\.venv\Scripts\Activate.ps1
+# Instalar
+$ python -m pip install --upgrade pip
+$ pip install -r requirements.txt
+# Crear tu .env
+# Crear tu archivo .env con: BOT_TOKEN:tu_token_aqui
+# Correr
+$ python mibot.py
+# Detener bot: Ctrl + C
+# Desactivar el entorno
+$ deactivate
+```
+
+## Instalación en Ubuntu (Google Cloud)
 
 ```bash
-# Actualizar lista de paquetes del sistema
+# Clonar y Actualizar
 $ sudo apt update
-$ apt list --upgradable
-$ sudo apt upgrade
-# Instalar Python
-$ sudo apt install python
-# Si no funciona, instalar Python3
-$ sudo apt install python3
-# Instalar ffmpeg
-$ sudo apt install ffmpeg -y
-# Clonar el proyecto
+$ sudo apt install python3.11-venv ffmpeg -y
 $ git clone https://github.com/programador024/SicariBot.git
 # Acceder
 $ cd SicariBot
-# Para activar el entorno virtual
-$ .venv\Scripts\Activate.ps1
+# Crear entorno
+$ python3.11 -m venv .venv
+$ source .venv/bin/activate
 # Instalar librerias
 $ python -m pip install --upgrade pip
-$ pip install python-telegram-bot
-$ pip install pytelegrambotapi
-$ pip install google-api-python-client
-$ pip install beautifulsoup4
-$ pip install pytube
-$ pip install pydub
-$ pip install yt-dlp
-$ pip install pillow
-$ pip install pytz
-# Para desactivar el entorno virtual
-$ .venv\Scripts\deactivate
+$ pip install -r requirements.txt
 # Correr el proyecto
 $ python mibot.py
-
-# En caso de que no jale pytube, ejecutar la siguiente libreria
-$ pip install git+https://github.com/pytube/pytube
+# Detener el bot: Ctrl + C
+# Para desactivar el entorno virtual
+$ .venv\Scripts\deactivate
 ```
 
-## Licencia ##
+## Para dejarlo 24/7 en Google Cloud
+
+```bash
+# Instalar screen
+$ sudo apt install screen -y
+$ screen -S bot
+# Dentro de screen, correr el bot
+$ source .venv/bin/activate
+$ python mibot.py
+# Para salir y dejarlo prendido:Ctrl + A
+# Para volver a verlo: screen -r bot
+```
+
+## Licencia
 
 Este proyecto fue creado: by <a href="https://github.com/programador024" target="_blank">SicarioOfc</a>
 

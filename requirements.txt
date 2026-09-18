@@ -1,0 +1,9 @@
+pytelegrambotapi
+yt-dlp
+pytube
+pydub
+pillow
+pytz
+beautifulsoup4
+google-api-python-client
+python-dotenv

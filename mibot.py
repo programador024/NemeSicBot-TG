@@ -17,8 +17,8 @@ import pytz
 #Para la descarga de imagen, musica, texto, sticker
 import re
 import logging
-from telegram import Update
-from telegram.ext import Updater, CommandHandler, MessageHandler
+#from telegram import Update
+#from telegram.ext import Updater, CommandHandler, MessageHandler
 from googleapiclient.discovery import build
 from bs4 import BeautifulSoup
 import requests
@@ -28,8 +28,8 @@ from pydub import AudioSegment
 from PIL import Image  # Para redimensionar y convertir la imagen
 
 #Configuración de la API de Google Custom Search
-API_KEY = "Tu-ID-De-Google-Cloud-Console" #ID de Google Cloud Console
-SEARCH_ENGINE_ID = "Tu-ID-De-Custom-Search" #ID de Custom Search
+API_KEY = "ID_de_Google_Cloud_Console_Aqui" #ID de Google Cloud Console
+SEARCH_ENGINE_ID = "ID_De_Custom_Search_Aqui" #ID de Custom Search
 SEARCH_URL = "https://www.googleapis.com/customsearch/v1"
 
 # Instanciar el bot en Telegram
@@ -626,7 +626,7 @@ def cmd_apktoolm(message):
 @bot.message_handler(commands=["telegrampremium"])
 @acceso_restringido
 def cmd_telegrampremium(message):
-    sent_message = bot.reply_to(message, "Telegram PremiumV3: https://www.mediafire.com/file/55teh796m17yrpk/%25F0%259F%2594%25A5%25E2%2583%259F%25E2%2598%25A0%25EF%25B8%258E%25F0%259D%2594%2597%25F0%259D%2594%25A2%25F0%259D%2594%25A9%25F0%259D%2594%25A2%25F0%259D%2594%25A4%25F0%259D%2594%25AF%25F0%259D%2594%259E%25F0%259D%2594%25AA_%25F0%259D%2594%2596%25F0%259D%2594%25A6%25F0%259D%2594%25A0%25F0%259D%2594%259E%25F0%259D%2594%25AF%25F0%259D%2594%25A6%25F0%259F%258E%25AD%25F0%259D%2593%25A53.rar/file", reply_markup=keyboard1)    
+    sent_message = bot.reply_to(message, "Telegram PremiumV6: https://www.mediafire.com/file/rtpxl73jaa86836/%25F0%259F%2594%25A5%25E2%2583%259F%25E2%2598%25A0%25F0%259D%2594%2597%25F0%259D%2594%25A2%25F0%259D%2594%25A9%25F0%259D%2594%25A2%25F0%259D%2594%25A4%25F0%259D%2594%25AF%25F0%259D%2594%259E%25F0%259D%2594%25AA_%25F0%259D%2594%2596%25F0%259D%2594%25A6%25F0%259D%2594%25A0%25F0%259D%2594%259E%25F0%259D%2594%25AF%25F0%259D%2594%25A6%25F0%259F%258E%25AD%25F0%259D%2593%25A56.apk/file", reply_markup=keyboard1)    
     bot.set_message_reaction(sent_message.chat.id, sent_message.message_id, [ReactionTypeEmoji("💜")])    
 
 # Función para buscar imágenes en Google

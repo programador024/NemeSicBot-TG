@@ -1,0 +1,6 @@
+# Entornos virtuales locales (nunca subir)
+.venv/
+venv/
+
+# Archivos de configuración con tokens secretos
+.env
