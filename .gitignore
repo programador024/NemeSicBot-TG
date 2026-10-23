@@ -9,4 +9,4 @@ venv/
 .env
 *.db
 *.sqlite3
-config.py
+suscriptores.json
